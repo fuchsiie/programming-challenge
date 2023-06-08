@@ -67,4 +67,8 @@ public class Weather extends Data {
         + ", calcDeltaTemperature=" + this.calcDeltaTemperature()
         + "]";
     }
+
+    public int getDay() {
+        return day;
+    }
 }
