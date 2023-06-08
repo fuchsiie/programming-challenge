@@ -1,5 +1,10 @@
 package de.exxcellent.challenge.model;
 
+/**
+ * Class represents one weather day.
+ *
+ * @author Marc Fuchs <marcf1108@hotmail.de>
+ */
 public class Weather extends Data {
     private int day;
     private int maximumTemperature;
@@ -16,10 +21,17 @@ public class Weather extends Data {
     private int mn;
     private float r_AvSLP;
 
+    /**
+     * Calculates the difference between maximumTemperature and minimumTemperature.
+     * @return Returns the calculated difference.
+     */
     public int calcDeltaTemperature() {
         return this.maximumTemperature - this.minimumTemperature;
     }
 
+    /**
+     * Returns a String that represents the Object and its values.
+     */
     @Override
     public String toString() {
         return "Weather [Day=" + this.day
