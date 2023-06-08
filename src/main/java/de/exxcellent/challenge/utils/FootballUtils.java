@@ -7,6 +7,8 @@ import de.exxcellent.challenge.model.Football;
 
 /**
  * Collection of utilities for working with Football data.
+ * 
+ * @author Marc Fuchs <marcf1108@hotmail.de>
  */
 public class FootballUtils {
     /**

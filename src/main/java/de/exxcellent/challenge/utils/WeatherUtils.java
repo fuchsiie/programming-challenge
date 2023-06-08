@@ -7,6 +7,8 @@ import de.exxcellent.challenge.model.Weather;
 
 /**
  * Collection of utilities for working with Weather data.
+ * 
+ * @author Marc Fuchs <marcf1108@hotmail.de>
  */
 public class WeatherUtils {
     /**
