@@ -33,7 +33,7 @@ public class WeatherUtils {
      * @param pathToFile Absolute or relative path to the data file.
      * @return Returns the weather entry with the smallest difference between maximum and minimum temperature.
      */
-    public static Weather getSmallestMinMaxTempDiffDay(String pathToFile) {
+    public static Weather getSmallestMinMaxTempDiffDayByPath(String pathToFile) {
         try {
             List<Weather> weatherList = getWeatherData(pathToFile);
             return getSmallestMinMaxTempDiffDay(weatherList);
@@ -50,6 +50,9 @@ public class WeatherUtils {
      * @return Returns the weather entry with the smallest difference between maximum and minimum temperature.
      */
     public static Weather getSmallestMinMaxTempDiffDay(List<Weather> weatherList) {
+        if(weatherList == null) {
+            return null;
+        }
         Weather smallestDiff = weatherList.get(0);
         for (Weather entry : weatherList) {
             smallestDiff = smallestDiff.calcDeltaTemperature() <= entry.calcDeltaTemperature() ? smallestDiff : entry;

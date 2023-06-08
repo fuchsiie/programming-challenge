@@ -21,7 +21,7 @@ public final class App {
     public static void main(String... args) {
 
         // Your preparation code …
-        Weather smallestTempDiffEntry = WeatherUtils.getSmallestMinMaxTempDiffDay("de/exxcellent/challenge/weather.csv");
+        Weather smallestTempDiffEntry = WeatherUtils.getSmallestMinMaxTempDiffDayByPath("de/exxcellent/challenge/weather.csv");
 
         String dayWithSmallestTempSpread = smallestTempDiffEntry != null
             ? Integer.toString(smallestTempDiffEntry.getDay())
