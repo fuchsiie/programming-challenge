@@ -28,7 +28,7 @@ public final class App {
             : "There was an error finding the requested day!";     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
-        Football smallestGoalSpreadEntry = FootballUtils.getSmallestGoalsDiffTeam("de/exxcellent/challenge/football.csv");
+        Football smallestGoalSpreadEntry = FootballUtils.getSmallestGoalsDiffTeamByPath("de/exxcellent/challenge/football.csv");
 
         String teamWithSmallestGoalSpread = smallestGoalSpreadEntry != null
             ? smallestGoalSpreadEntry.getTeam()

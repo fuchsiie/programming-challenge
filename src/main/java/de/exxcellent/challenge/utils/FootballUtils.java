@@ -33,7 +33,7 @@ public class FootballUtils {
      * @param pathToFile Absolute or relative path to the data file.
      * @return Returns the football entry with the smallest difference between goals and goals allowed.
      */
-    public static Football getSmallestGoalsDiffTeam(String pathToFile) {
+    public static Football getSmallestGoalsDiffTeamByPath(String pathToFile) {
         try {
             List<Football> weatherList = getFootballData(pathToFile);
             return getSmallestGoalsDiffTeam(weatherList);
@@ -50,6 +50,9 @@ public class FootballUtils {
      * @return Returns the football entry with the smallest difference between goals and goals allowed.
      */
     public static Football getSmallestGoalsDiffTeam(List<Football> footballList) {
+        if(footballList == null) {
+            return null;
+        }
         Football smallestDiff = footballList.get(0);
         for (Football entry : footballList) {
             smallestDiff = smallestDiff.calcDeltaGoals() <= entry.calcDeltaGoals() ? smallestDiff : entry;
