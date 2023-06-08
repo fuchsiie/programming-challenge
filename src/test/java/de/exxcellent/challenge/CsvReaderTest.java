@@ -9,10 +9,9 @@ import org.junit.jupiter.api.Test;
 
 import de.exxcellent.challenge.model.Weather;
 import de.exxcellent.challenge.reader.CsvReader;
-import de.exxcellent.challenge.utils.Utils;
 
 /**
- * Testclass for de/exxcellent/challenge/utils/Utils
+ * Testclass for de/exxcellent/challenge/reader/CsvReader
  * 
  * @author Marc Fuchs <marcf1108@hotmail.de>
  */
