@@ -48,4 +48,8 @@ public class Football extends Data {
         + ", Points=" + this.points
         + "]";
     }
+
+    public String getTeam() {
+        return team;
+    }
 }
