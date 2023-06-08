@@ -53,16 +53,20 @@ public class CsvReader implements DataReader {
      */
     @Override
     public String getAbsolutePathToFile(String pathToFile) throws IllegalArgumentException {
-        File f = new File(pathToFile);
-        if(f.exists()) {
-            return pathToFile;
-        } else {
-            try {
+        if(pathToFile == null || pathToFile.isEmpty()) {
+            throw new IllegalArgumentException("The provided path to the file is either empty or null! Path: " + pathToFile);
+        }
+        try {
+            File f = new File(pathToFile);
+            if(f.exists()) {
+                return pathToFile;
+            } else {
                 String absolutePath = this.getClass().getClassLoader().getResource(pathToFile).getFile();
                 return absolutePath;
-            } catch (NullPointerException e) {
-                throw new IllegalArgumentException("The file to which the path points could not be found.! Path: " + pathToFile);
             }
+        } catch (NullPointerException e) {
+            throw new IllegalArgumentException("The file to which the path points could not be found! Path: " + pathToFile);
         }
+        
     }
 }
