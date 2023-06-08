@@ -1,18 +1,28 @@
 package de.exxcellent.challenge.model;
 
+import com.opencsv.bean.CsvBindByName;
+
 /**
  * Class represents one football team.
  *
  * @author Marc Fuchs <marcf1108@hotmail.de>
  */
 public class Football extends Data {
+    @CsvBindByName(column = "Team")
     private String team;
+    @CsvBindByName(column = "Games")
     private int games;
+    @CsvBindByName(column = "Wins")
     private int wins;
+    @CsvBindByName(column = "Losses")
     private int losses;
+    @CsvBindByName(column = "Draws")
     private int draws;
+    @CsvBindByName(column = "Goals")
     private int goals;
+    @CsvBindByName(column = "Goals Allowed")
     private int goals_allowed;
+    @CsvBindByName(column = "Points")
     private int points;
 
     /**

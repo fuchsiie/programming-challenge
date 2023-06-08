@@ -1,24 +1,40 @@
 package de.exxcellent.challenge.model;
 
+import com.opencsv.bean.CsvBindByName;
+
 /**
  * Class represents one weather day.
  *
  * @author Marc Fuchs <marcf1108@hotmail.de>
  */
 public class Weather extends Data {
+    @CsvBindByName(column = "Day")
     private int day;
+    @CsvBindByName(column = "MxT")
     private int maximumTemperature;
+    @CsvBindByName(column = "MnT")
     private int minimumTemperature;
+    @CsvBindByName(column = "AvT")
     private int avT;
+    @CsvBindByName(column = "AvDP")
     private float avDP;
+    @CsvBindByName(column = "1HrP TPcpn")
     private int oneHrP_TPcpn;
+    @CsvBindByName(column = "PDir")
     private int pDir;
+    @CsvBindByName(column = "AvSp")
     private float avSp;
+    @CsvBindByName(column = "Dir")
     private int dir;
+    @CsvBindByName(column = "MxS")
     private int mxS;
+    @CsvBindByName(column = "SkyC")
     private float skyC;
+    @CsvBindByName(column = "MxR")
     private int mxR;
+    @CsvBindByName(column = "Mn")
     private int mn;
+    @CsvBindByName(column = "R AvSLP")
     private float r_AvSLP;
 
     /**
