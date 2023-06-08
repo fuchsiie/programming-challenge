@@ -10,7 +10,7 @@ import de.exxcellent.challenge.reader.DataReader;
  */
 public class Utils {
     public static DataReader getReader(String pathToFile) throws IllegalArgumentException{
-        if(pathToFile.endsWith(".csv")) {
+        if(pathToFile != null && pathToFile.endsWith(".csv")) {
             return new CsvReader();
         } else {
             throw new IllegalArgumentException("Unknown file ending! Path provided: " + pathToFile);
