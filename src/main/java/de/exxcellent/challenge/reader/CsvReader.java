@@ -14,8 +14,11 @@ public class CsvReader implements DataReader {
 
     @Override
     public boolean validatePathToFile(String pathToFile) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'validatePathToFile'");
+        if(!pathToFile.isBlank() && pathToFile.endsWith(".csv")) {
+            return true;
+        } else {
+            return false;
+        }
     }
     
 }
